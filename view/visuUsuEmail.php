@@ -13,8 +13,8 @@ include_once("../model/usuarioModel.php");
   <div class="col-12">
     <label class="visually-hidden" for="inlineFormInputGroupUsername">Nome do usuario</label>
     <div class="input-group">
-      <div class="input-group-text">Nome</div>
-      <input type="text" name="nomeUsu" class="form-control" id="inlineFormInputGroupUsername" placeholder="Nome do usuario">
+      <div class="input-group-text">Email</div>
+      <input type="text" name="emailUsu" class="form-control" id="inlineFormInputGroupUsername" placeholder="E-mail do usuario">
     </div>
   </div>
 
@@ -36,19 +36,20 @@ include_once("../model/usuarioModel.php");
   </thead>
   <tbody>
   <?php
-$nomeusu = isset ($_POST["nomeUsu"])? $_POST["nomeUsu"]:"" ;
+$emailusu = isset ($_POST["emailUsu"])? $_POST["emailUsu"]:"" ;
 
-if($nomeusu){
+if($emailusu){
 
-$dado = visuUsuarioNome($conn,$nomeusu);
 
-foreach($dado as $nomeUsuarios): 
+$dado = visuUsuarioEmail($conn, $emailusu);
+
+foreach($dado as $emailUsuarios): 
 ?>
     <tr>
-      <th scope="row"><?=$nomeUsuarios["idusu"] ?></th>
-      <td><?=$nomeUsuarios["nomeusu"] ?></td>
-      <td><?=$nomeUsuarios["emailusu"] ?></td>
-      <td><?=$nomeUsuarios["foneusu"] ?></td>
+      <th scope="row"><?=$emailUsuarios["idusu"] ?></th>
+      <td><?=$emailUsuarios["nomeusu"] ?></td>
+      <td><?=$emailUsuarios["emailusu"] ?></td>
+      <td><?=$emailUsuarios["foneusu"] ?></td>
     </tr>
     <?php
       endforeach;
