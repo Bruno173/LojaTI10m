@@ -41,14 +41,13 @@
                             Jogos
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Cadastrar</a></li>
+                            <li><a class="dropdown-item" href="../view/cadastroJogo.php">Cadastrar</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
                             <li><a class="dropdown-item" href="#">Pesquisar por Gênero</a></li>
                             <li><a class="dropdown-item" href="#">Pesquisar por Código</a></li>
-                            <li><a class="dropdown-item" href="#">Pesquisar por Nome</a></li>
-                            <li><a class="dropdown-item" href="#">Pesquisar por Plataforma</a></li>
+                            <li><a class="dropdown-item" href="../view/visuJogoNome.php">Pesquisar por Nome</a></li>
                         </ul>
                     </li>
                 </ul>

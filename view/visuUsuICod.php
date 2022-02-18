@@ -42,6 +42,7 @@ if($codigousu){
 
 $dado = visuUsuarioCodigo($conn,$codigousu);
 
+if($dado){
 
 ?>
     <tr>
@@ -51,6 +52,7 @@ $dado = visuUsuarioCodigo($conn,$codigousu);
       <td><?=$dado["foneusu"] ?></td>
     </tr>
     <?php
+    }
     }
     ?>
   </tbody>
