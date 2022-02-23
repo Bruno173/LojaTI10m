@@ -45,8 +45,8 @@
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#">Pesquisar por Gênero</a></li>
-                            <li><a class="dropdown-item" href="#">Pesquisar por Código</a></li>
+                            <li><a class="dropdown-item" href="../view/visuJogoGenero.php">Pesquisar por Gênero</a></li>
+                            <li><a class="dropdown-item" href="../view/visuJogoCod.php">Pesquisar por Código</a></li>
                             <li><a class="dropdown-item" href="../view/visuJogoNome.php">Pesquisar por Nome</a></li>
                         </ul>
                     </li>
