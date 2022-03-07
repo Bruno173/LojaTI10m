@@ -32,6 +32,8 @@ include_once("../model/usuarioModel.php");
       <th scope="col">Nome</th>
       <th scope="col">Email</th>
       <th scope="col">Fone</th>
+      <th scope="col">Alterar</th>
+      <th scope="col">Excluir</th>
     </tr>
   </thead>
   <tbody>
@@ -50,6 +52,16 @@ foreach($dado as $emailUsuarios):
       <td><?=$emailUsuarios["nomeusu"] ?></td>
       <td><?=$emailUsuarios["emailusu"] ?></td>
       <td><?=$emailUsuarios["foneusu"] ?></td>
+      <td>
+      <form action="../view/alterarForm.php" method="post">
+      
+      <input type="hidden" value="<?=$emailUsuarios["idusu"] ?>" name="idusu">
+      <button type="submit" class="bnt btn-primary">Alterar</button>
+
+      </form>
+
+    </td>
+      <td><?=$emailUsuarios["idusu"] ?></td>
     </tr>
     <?php
       endforeach;

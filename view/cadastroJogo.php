@@ -17,7 +17,7 @@ include_once("header.php");
     <label for="inputGenero" class="form-label">Tipo de usuário</label>
     <select id="inputGenero" name="generojogo" class="form-select">
       <option selected>Escolha...</option>
-      <option value="RPG">RPG</option>++++++++++++++++++++++++++++++++++++++++
+      <option value="RPG">RPG</option>
       <option value="Aventura">Aventura</option>
       <option value="Puzzle">Puzzle</option>
       <option value="FPS">FPS</option>
