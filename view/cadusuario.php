@@ -36,9 +36,9 @@ include_once("header.php");
   <div class="col-md-6">
     <label for="inputTipo" class="form-label">Tipo de usuário</label>
     <select id="inputTipo" name="tipousu" class="form-select">
-      <option selected>Escolha...</option>
-      <option value="Funcionario">Funcionario</option>
-      <option value="Cliente"> Cliente</option>
+      <option selected >Escolha...</option>
+      <option value="1">Funcionario</option>
+      <option value="2"> Cliente</option>
     </select>
   </div>
  
