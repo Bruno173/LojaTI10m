@@ -35,6 +35,8 @@ function visuUsuarioCodigo($conn, $codigousu){
 function alterarUsuario($conn,$codigousu,$nomeusu,$emailusu,$foneusu,$cpfusu,$tipousu,$cepusu,$numusu,$compusu){
     $query = "update tbusuario set nomeusu='{$nomeusu}', emailusu='{$emailusu}', foneusu='{$foneusu}', tipousu='{$tipousu}', cpfusu='{$cpfusu}', cepusu='{$cepusu}', numusu='{$numusu}', compleusu='{$compusu}' where idusu = '{$codigousu}'";
 
-}
+    $resultado = mysqli_query($conn, $query);
+    return $resultado;
+};
 
 ?>

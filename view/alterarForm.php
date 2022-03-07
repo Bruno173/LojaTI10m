@@ -12,7 +12,8 @@ $informa = visuUsuarioCodigo($conn, $idusu);
 
 <div class="container">
 
-<form class="row g-3" action="" method="post">
+<form class="row g-3" action="../controler/alterarUsuario.php" method="post">
+  <input type="hidden" name="codigousu" value="<?=$informa["idusu"]?>">
   <div class="col-md-6">
     <label for="inputNome4" class="form-label">Nome</label>
     <input type="text" name="nomeusu" value="<?=$informa["nomeusu"] ?>" class="form-control" id="inputNome4" required>
