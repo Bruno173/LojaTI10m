@@ -27,11 +27,13 @@ include_once("../model/usuarioModel.php");
 
 <table class="table">
   <thead>
-    <tr>
-      <th scope="col">código</th>
+  <tr>
+      <th scope="col">codigo</th>
       <th scope="col">Nome</th>
       <th scope="col">Email</th>
       <th scope="col">Fone</th>
+      <th scope="col">Alterar</th>
+      <th scope="col">Excluir</th>
     </tr>
   </thead>
   <tbody>
@@ -50,6 +52,16 @@ if($dado){
       <td><?=$dado["nomeusu"] ?></td>
       <td><?=$dado["emailusu"] ?></td>
       <td><?=$dado["foneusu"] ?></td>
+      <td>
+      <form action="../view/alterarForm.php" method="post">
+      
+      <input type="hidden" value="<?=$dado["idusu"] ?>" name="idusu">
+      <button type="submit" class="bnt btn-primary">Alterar</button>
+
+      </form>
+
+    </td>
+      <td><?=$dado["idusu"] ?></td>
     </tr>
     <?php
     }
