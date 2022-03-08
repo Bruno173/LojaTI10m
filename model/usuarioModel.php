@@ -39,4 +39,9 @@ function alterarUsuario($conn,$codigousu,$nomeusu,$emailusu,$foneusu,$cpfusu,$ti
     return $resultado;
 };
 
+function deletarUsuario($conn, $codigousu){
+    $query = "delete from tbusuario where idusu='{$codigousu}'";
+    $resultado = mysqli_query($conn,$query);
+    return $resultado;
+};
 ?>
