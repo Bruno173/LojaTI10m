@@ -56,12 +56,20 @@ if($dado){
       <form action="../view/alterarForm.php" method="post">
       
       <input type="hidden" value="<?=$dado["idusu"] ?>" name="idusu">
-      <button type="submit" class="bnt btn-primary">Alterar</button>
+      <button type="submit" class="btn btn-primary">Alterar</button>
 
       </form>
 
     </td>
-      <td><?=$dado["idusu"] ?></td>
+      <td>
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
+        Excluir
+        </button>
+
+     
+      </td>
     </tr>
     <?php
     }
@@ -70,6 +78,25 @@ if($dado){
   </tbody>
 </table>
 
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteModal">Excluir Usuario</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Deseja realmente excluir este usuario?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-danger">Excluir</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 <?php
