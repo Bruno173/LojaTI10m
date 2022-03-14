@@ -14,7 +14,7 @@ include_once("header.php");
     <input type="text" name="valorjogo" class="form-control" id="inputValor" placeholder="XX,XX" required>
   </div>
   <div class="col-md-6">
-    <label for="inputGenero" class="form-label">Tipo de usuário</label>
+    <label for="inputGenero" class="form-label">Tipo de jogo</label>
     <select id="inputGenero" name="generojogo" class="form-select">
       <option selected>Escolha...</option>
       <option value="RPG">RPG</option>

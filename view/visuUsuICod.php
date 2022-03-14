@@ -64,7 +64,7 @@ if($dado){
       <td>
 
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
+        <button type="button" class="btn btn-danger" codigo="<?=$dado["idusu"] ?>" email="<?=$dado["emailusu"]?>" data-bs-toggle="modal" data-bs-target="#deleteModal">
         Excluir
         </button>
 
@@ -89,15 +89,36 @@ if($dado){
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        Deseja realmente excluir este usuario?
+        .
       </div>
       <div class="modal-footer">
+      <form action="../controler/deletarUsu.php" method="get">
+      
+      <input type="hidden" value="" class="codigo from-control" name="codigousu">
+      <button type="submit" class="btn btn-danger">Excluir</button>
+
+      </form>
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-danger">Excluir</button>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+    var deletarUsuarioModal = document.getElementById('deleteModal');
+    deletarUsuarioModal.addEventListener('show.bs.modal',function(event){
+      var button = event.relatedTarget;
+      var codigo = button.getAttribute('codigo');
+      var email = button.getAttribute('email');
+
+      var modalBody = deletarUsuarioModal.querySelector('.modal-body');
+      modalBody.textContent = 'Deseja realmente excluir o usuario do código ' + codigo + '?'
+
+      var Codigo =  deletarUsuarioModal.querySelector('.modal-footer .codigo');
+      Codigo.value = codigo;
+
+    })
+  </script>
 
 <?php
 
