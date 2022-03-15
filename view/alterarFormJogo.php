@@ -23,26 +23,8 @@ $informa = visuJogoCodigo($conn, $idjogo);
         </div>
         <div class="col-md-6">
             <label for="inputGenero" class="form-label">Tipo de jogo</label>
-            <select id="inputGenero" name="generojogo" value="<?= $informa["generojogo"] ?>" class="form-select">
-                <?php
-                switch ($informa["generojogo"]) {
-                    case "RPG":
-                        echo "i é igual a 0";
-                        break;
-                    case "Aventura":
-                        echo "i é igual a 1";
-                        break;
-                    case "Puzzle":
-                        echo "i é igual a 2";
-                        break;
-                    case "FPS":
-                        echo "i é igual a 2";
-                        break;
-                    case "Corrida":
-                        echo "i é igual a 2";
-                        break;
-                }
-                ?>
+            <select id="inputGenero" name="generojogo"  class="form-select">
+            <option selected value="<?= $informa["generojogo"] ?>"> <?= $informa["generojogo"] ?> </option>
                 <option value="RPG">RPG</option>
                 <option value="Aventura">Aventura</option>
                 <option value="Puzzle">Puzzle</option>
@@ -66,7 +48,7 @@ $informa = visuJogoCodigo($conn, $idjogo);
 
         <div class="col-12">
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <input class="form-check-input" type="checkbox" id="gridCheck" required>
                 <label class="form-check-label" for="gridCheck">
                     Aceita-se os termo de uso do sistema de jogos
                 </label>
