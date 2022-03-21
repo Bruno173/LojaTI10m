@@ -7,7 +7,7 @@ include_once("../model/usuarioModel.php");
 extract($_REQUEST,EXTR_OVERWRITE);
 
 
-if(inserirUsuario($conn,$nomeusu,$emailusu,$foneusu,$cpfusu,$tipousu,$cepusu,$numusu,$compusu, $senha, $pinusu)){
+if(inserirUsuario($conn,$nomeusu,$emailusu,$foneusu,$cpfusu,$tipousu,$cepusu,$numusu,$compusu, $senhausu, $pinusu)){
 echo("O perfil foram cadastro com sucesso !!!");
 }else{
 echo("O perfil esta incompleto, tente novamente !!!");
