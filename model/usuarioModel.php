@@ -61,12 +61,12 @@ function loginUsuario($conn,$emailusu,$senhausu){
             $_SESSION["emailusu"] = $row["emailusu"];
             return $row["emailusu"];
         }else{
-            return "Acesso negado1";
+            return "Acesso negado";
         }
     }else{
-        return "Acesso negado2";
+        return "Acesso negado";
     }
-    return "Acesso negado3";
+    return "Acesso negado";
 
 };
 
@@ -74,7 +74,7 @@ function usarAcesso(){
     $email = isset($_SESSION["email"]);
     if(!$email){
         $_SESSION["msg"] = "<div class=''alert alert-danger' role='alert' Faça login para ter acesso ao sistema.</div>";
-        header("Location:../view/acessofun.php");
+        header("Location:../view/index.php");
     }
 };
 
